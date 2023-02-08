@@ -47,11 +47,11 @@ class MirrorBot:
     print("Heartbeat begins")
     while True:
       time.sleep(interval)
-      heartbeatJSON = {
+      heartbeat_json = {
         "op": 1,
         "d": "null"
       }
-      self.send_json_request(heartbeatJSON)
+      self.send_json_request(heartbeat_json)
       print("Heartbeat sent")
 
   def mirror_thread(self, source_server, source_channel, webhook_url, webhook_name, auth_token):
